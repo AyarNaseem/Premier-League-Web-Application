@@ -35,26 +35,26 @@ A secure backend panel for administrators:
 📁 Organized content management system (CMS) built with PHP & MySQL
 
 #### 🧱 Technologies Used
-# Frontend
+**Frontend**
 
-HTML5
+* HTML5
 
-CSS3
+* CSS3
 
-JavaScript
+* JavaScript
 
-## Backend
+**Backend**
 
-PHP
+* PHP
 
-MySQL
+* MySQL
 
-### Other
+**Other**
 
-Responsive UI
+* Responsive UI
 
-Custom styling
+* Custom styling
 
-Manual database structure
+* Manual database structure
 
-Secure CRUD operations
+* Secure CRUD operations
