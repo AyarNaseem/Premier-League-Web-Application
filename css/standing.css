@@ -1,0 +1,337 @@
+
+/* standing section */
+#standing{
+    background-color: white;
+    width:100%; 
+}
+
+.standing-title{
+    text-align: center;
+    color: #38003c;
+    font-size: 30px;
+    margin: 4vh 0;
+}
+
+
+
+.standing-table{
+    padding: 0 10% 5% 13%;
+    /* bo henana nawarrasti table w shtakan w krdnian ba yak column */
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: center;
+    /*  */
+}
+
+/* bo away xati newan xanakani table'aka rashbkainawa */
+.standing-table table{
+    border-collapse: collapse;
+}
+
+.standing-table tr{
+    transition: 0.3s;
+    background: #f2f2f2;
+}
+
+.standing-table tr:nth-child(2),
+.standing-table tr:nth-child(3),
+.standing-table tr:nth-child(4),
+.standing-table tr:nth-child(5){
+    border-bottom: 3px #00088e solid;
+}
+
+.standing-table tr:nth-child(6){
+    border-bottom: 3px orange solid;
+}
+
+.standing-table tr:nth-child(7){
+    border-bottom: 3px green solid;
+}
+
+.standing-table tr:nth-child(19),
+.standing-table tr:nth-child(20),
+.standing-table tr:nth-child(21) {
+    border-bottom: 3px red solid;
+}
+
+.standing-table tr th{
+    font-size: 20px;
+    font-weight:500;
+    padding: 20px;
+    margin: 10px;
+    width: fit-content;
+    text-align: center;
+    background-color:#38003c;
+    color: white;
+}
+
+.standing-table tr td{
+    border-bottom: 2px solid white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.standing-table tr:hover{    
+    transform: scale(1.01);
+}
+
+/* bo bold krdni points */
+.standing-table tr td:last-child{
+    font-weight: bold;
+}
+
+.standing-table tr td img{
+    /* width: 15%; */
+    height: 40px;
+    padding-right: 5px;
+}
+.standing-table tr td p{
+    /* ... */
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.standing-table tr td:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+
+/* away ka nusrawa qualificate to UCL w htd... */
+.explain{
+    display: inline-flex;
+    margin: 6% 0 0px 6%;
+}
+
+.explain span{
+    padding:0 30px 0 10px;
+}
+
+.explain div{
+    transform: translateY(8px);
+}
+
+
+.blue,
+.orange,
+.green,
+.red{
+    width: 10px;
+    height: 10px;
+}
+
+.blue{
+    background: #00088e;
+}
+.orange{
+    background-color: orange;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+
+
+
+/* responsive for 1024 */
+@media screen and (max-width: 1024px) {
+    .make-for-screen-size:nth-child(7){
+        display: none;
+    }
+
+}
+@media screen and (max-width: 940px) {
+    .make-for-screen-size:nth-child(8){
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .standing-table tr th{
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .standing-table tr th{
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .standing-table tr th{
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 625px) {
+    
+    .explain{
+        font-size: 9px;
+        /* margin: 5px -20px 5px 0px; */
+        flex-direction: column;
+        margin-left: -100px;
+    }
+    .explain span{
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 625px) {
+    .standing-table tr th{
+        font-size: 12px;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+
+    #standing{
+        width:100%; 
+    }
+    
+    
+    /* standing section */
+    .standing-title{
+        font-size: 20px;
+    }
+    
+    .standing-table{
+        padding: 2px;
+    }
+    
+    /* katak dabta smal size handak
+    la column'akani table'aka ladabam */
+    .make-for-screen-size{
+        display: none;
+    }
+    
+    .standing-table tr:hover{
+        transform: unset;
+    }
+    
+    .standing-table tr th{
+        font-size: 17px;
+        font-weight:400;
+    }
+    
+    .standing-table tr td{
+        font-size: 14px;
+    }
+    
+    
+    .standing-table tr:nth-child(2){
+        border-bottom: 2.02px #00088e groove ;
+    }
+    
+    .standing-table tr:nth-child(3){
+        border-bottom: 2.02px #00088e groove ;
+    }
+    
+    .standing-table tr:nth-child(4){
+        border-bottom: 2.02px #00088e groove ;
+    }
+    
+    .standing-table tr:nth-child(5){
+        border-bottom: 2.02px #00088e groove ;
+    }
+    
+    .standing-table tr:nth-child(6){
+        border-bottom: 2.02px orange groove;
+    }
+    
+    .standing-table tr:nth-child(7){
+        border-bottom: 2.02px green   groove ;
+    }
+    
+    .standing-table tr:nth-child(19){
+        border-bottom: 2.02px red groove ;
+    }
+    .standing-table tr:nth-child(20){
+        border-bottom: 2.02px red groove ;
+    }
+    .standing-table tr:nth-child(21){
+        border-bottom: 2.02px red groove ;
+    }
+
+    .standing-table tr td img{
+        width: 30px;
+        height: fit-content;
+        padding-right: 5px;
+    }
+    
+    
+    .explain{
+        font-size: 11px;
+        margin: 10px 0 5px 0;
+    }
+    
+    .explain span{
+        padding:0 5px 0 5px;
+    }
+    
+    .blue{
+        width: 20px;
+    }
+    
+    .orange{
+        width: 20px;
+    }
+    
+    .green{
+        width: 20px;
+    }
+    
+    .red{
+        width: 20px;
+    }
+
+    .explain{
+        font-size: 9px;
+        /* margin: 5px -20px 5px 0px; */
+        flex-direction: column;
+        margin-left: -100px;
+    }
+    
+     .explain span{
+        padding:0px 8px 3px 10px;
+    }
+    .explain div{
+        width: 8px;
+        height: 2px;
+    } 
+    
+}
+
+
+/* responsive for iphone 14 Pro max*/
+@media screen and (max-width: 431px) {
+
+    #standing{
+        width:100%; 
+    }
+    
+    .standing-title{
+        font-size: 16px;
+        margin: 15px 0 0 5px;
+    }
+
+    .standing-table tr th{
+        font-size: 12px;
+        font-weight:350;
+        padding: 12px;
+    }
+    .standing-table tr td img{
+        height: 30px;
+        padding-right: 2px;
+    }
+    
+    .standing-table tr td{
+        font-size: 12px;
+        padding-top: 2px;
+    }
+    
+}

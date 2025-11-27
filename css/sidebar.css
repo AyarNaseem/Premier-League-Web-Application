@@ -1,0 +1,57 @@
+/* sidebar */
+/*dastkari iconakam krdya */
+#sidebar li img{
+    background-color: #38003c;
+    padding: 15px;
+    width: 20px;
+}
+
+
+#sidebar ul{
+    position:fixed;
+    transition: 0.1s;
+    animation: leftToRight;
+    animation-duration: 0.8s;
+    animation-timing-function:ease;
+    z-index: 1;
+}
+
+/* lera dastkari nusinin tanisht iconakan dakain */
+#sidebar ul li ul{
+    transition: 0.3s;
+    padding: 20px;
+    display: none;
+    background-color: #00ff85;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* xatakai bn nisinakam ladaya */
+#sidebar ul li ul li a{
+    transition: 0.3s;
+    text-decoration: none;
+}
+/* katak hoverman lasar iconakan krd ch rwbda */
+#sidebar ul li:hover ul{
+    transform: none;
+    list-style: none;
+    display: inline;
+    position:absolute;
+    height: 10px;
+    text-decoration: none;
+    animation-duration: 0.4s;
+    z-index:-1;
+}
+/* ka chuina sar nusini tanisht icon rangi backG bgore */
+#sidebar ul li ul:hover {
+    background-color: #00de73;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    #sidebar{
+        display: none;
+    }
+}

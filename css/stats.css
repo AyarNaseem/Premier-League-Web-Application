@@ -1,0 +1,313 @@
+#stats {
+    background-image: url("../image/stats-back.jpg");
+    padding: 5% 20%;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+.topScorer-title {
+    background-color: #38003c;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    width: fit-content;
+    padding: 15px;
+    /* margin: 7% 0px -5% 39%; */
+    text-align: center;
+    margin: 30px auto;
+}
+
+.assist-title {
+    background-color: #00ff85;
+    color: #38003c;
+}
+
+.cleanSheet-title {
+    background-color: #fff200;
+    color: #38003c;
+    /* margin-left: 33%; */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    /* margin: 90px 90px 0 0; */
+    margin: 0 auto;
+}
+
+.stats-container{
+    overflow-x: auto;
+    width: 950px;
+    overflow-y: hidden;
+}
+.stats-container::-webkit-scrollbar {
+    width: 0px; /* Set the width to zero */
+    background: transparent; /* Make the scrollbar transparent */
+}
+
+.box {
+    transition: 0.4s;
+    width: 250px;
+    height: 500px;
+    border: 1px solid #38003c;
+    display: flex;
+    justify-content: center;
+}
+
+.box:hover {
+    transform: scale(1.05) translateZ(-10px);
+}
+
+.box {
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.box .name {
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    background: #38003c;
+    padding: 10px 40px 10px 40px;
+    border: white 1px solid;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.assist .box .name{
+    background:#00ff85;
+    color: #38003c;
+    border: #38003c 1px solid;
+}
+.cleanSheet .box .name{
+    background:#fff200;
+    color: #38003c;
+    border: #38003c 1px solid;
+    padding: 5px 10px 5px 10px;
+}
+
+
+.box .name span {
+    font-size: 45px;
+}
+
+.box .name {
+    opacity: 0;
+    transition: 0.9s;
+}
+
+.box:hover .name {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.box #ass,
+.box #gk {
+    background: #00ff85;
+    color: #38003c;
+    border-color: #38003c;
+    font-weight: bold;
+    padding: 6px;
+}
+
+#stats img {
+    width: 250px;
+    height: 500px;
+}
+
+
+
+
+
+
+/* responsive for 1280 */
+@media screen and (max-width: 1280px) {
+    #stats {
+        /* padding: 4% 5% 4% 5%; */
+    }
+    .stats-container {
+        width: 710px;
+        /* margin-left: 15%; */
+    }
+    .topScorer-title {
+        font-size: 18px;
+        width: fit-content;
+        padding: 12px;
+        /* margin: 7% 0px -5% 39%; */
+    }
+    .box {
+        width: 200px;
+        height: 400px;
+    }
+    #stats img {
+        width: 200px;
+        height: 400px;
+    }
+    .box .name {
+        font-size: 15px;
+        
+    }
+    .box .name span {
+        font-size: 30px;
+    }
+}
+
+/* for 1024 */
+@media screen and (max-width: 1024px) {
+    #stats {
+        /* padding: 2% 5% 2% 5%; */
+    }
+    .stats-container {
+        width: 640px;
+        /* margin-left: 10%; */
+    }
+    .topScorer-title {
+        font-size: 16px;
+        width: fit-content;
+        padding: 9px;
+        /* margin: 7% 0px -8% 39%; */
+    }
+    .box {
+        width: 175px;
+        height: 350px;
+    }
+    #stats img {
+        width: 175px;
+        height: 350px;
+    }
+    .box .name {
+        font-size: 12px;
+        
+    }
+    .box .name span {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .stats-container {
+        width: 600px;
+    }
+    .box {
+        width: 165px;
+        height: 330px;
+    }
+    #stats img {
+        width: 165px;
+        height: 330px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .stats-container {
+        width: 560px;
+    }
+    .box {
+        width: 150px;
+        height: 300px;
+    }
+    #stats img {
+        width: 150px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .stats-container {
+        width: 500px;
+    }
+    .box {
+        width: 130px;
+        height: 260px;
+    }
+    #stats img {
+        width: 130px;
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stats-container {
+        width: 450px;
+    }
+    .box {
+        width: 110px;
+        height: 220px;
+    }
+    #stats img {
+        width: 110px;
+        height: 210px;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    /* stats section */
+    #stats {
+    /* background-image: url("./image/stats-back.jpg"); */
+    /* padding: 3% 1% 5% 8%; */
+    }
+    .stats-container {
+        margin-top: 30px;
+    }
+    .stats-container{
+    width: 325px;
+    /* margin-left: 3%; */
+    }
+
+    .topScorer-title {
+        font-size: 12px;
+        /* width: fit-content;*/
+        padding: 5px;
+        /* margin: 7% 0px -18% 23%; */
+        /* margin-bottom: 3%; */
+        text-align: center; 
+
+    }
+
+    .cleanSheet-title {
+        /* margin-left: 30%; */
+        /* text-align: center; */
+    }
+
+    .assist-title {
+        /* margin-left: 19%; */
+    }
+
+    .stats-container {
+        display: flex;
+        /* flex-direction: column; */
+        gap: 20px;
+        justify-content: left;
+    }
+
+    .box {
+        width: 90px;
+        height: 180px;
+        /* margin-left: 10px; */
+    }
+
+
+    #stats img {
+        width: 90px;
+        height: 180px; /* Adjusted height for smaller screens */
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+    }
+
+    .box .name {
+        padding: 5px 10px 5px 10px; /* Adjusted padding for smaller screens */
+        font-size: 8px; /* Adjusted font size for smaller screens */
+        bottom: 10px;
+        
+    }
+    .box .name span{
+        font-size: 20px;
+    
+    }
+}

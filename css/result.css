@@ -1,0 +1,193 @@
+html{
+scroll-behavior: smooth;
+}
+
+
+*{
+margin: 0;
+padding: 0;
+}
+
+
+body{
+font-family: 'Poppins', sans-serif;
+}
+
+#result{
+/* padding: 0 10% 5% 20%; */
+background-color: #f2f2f2;
+}
+
+.result-title{
+text-align: center;
+color: #38003c;
+font-size: 30px;
+/* margin-right:10%; */
+padding: 4vh 0;
+}
+
+
+
+.result-table tr{
+transition: 0.3s;
+}
+
+.result-table tr td:first-child{
+border-radius: 99px 0 0 99px;
+}
+
+.result-table tr td:last-child{
+border-radius: 0 99px 99px 0;
+} 
+
+
+.result-table {
+    display: flex;
+    justify-content: center;
+}
+
+
+.result-table table {
+    /* width: 100%; */
+    max-width: 85%; 
+    margin: 0 auto; /* center the table */
+    border-collapse: separate; 
+    border-spacing: 0 10px;  /* bo away xati newan table'aka rashbkainawa */ 
+}
+
+
+.result-table tr:hover{
+transform: scale(1.05);
+} 
+
+.result-table tr td{
+background-color: #38003c;
+text-align: center;
+padding: 10px 90px;
+}
+
+
+.scorers{
+color: #e90052 !important;
+margin-top: 10px;
+line-height: 8px;
+font-size: 12px;
+}
+
+
+
+.result-table p{
+white-space: pre; /* anjamaka hardwki aheneta haman rriz */
+color: white;
+/* margin: 0 auto; */
+}
+
+.middle p{
+/* margin-right: 5rem; */
+font-size: 20px;
+}
+
+.result-table tr td img{
+/* width: 12%;     */
+width: 25px;
+height: fit-content;
+}
+
+@media screen and (max-width: 1000px) {
+    .result-table tr td{
+        padding: 10px 70px;
+        font-size: 14px;
+    }
+    .result-table tr td img{
+        width: 22px;
+        height: fit-content;
+    }
+    .middle p{
+        font-size: 16px;
+        }
+}
+@media screen and (max-width: 800px) {
+    .result-table tr td{
+        padding: 10px 50px;
+        font-size: 12px;
+    }
+    .middle p{
+        font-size: 14px;
+        }
+    .scorers{
+        color: #e90052 !important;
+        margin-top: 10px;
+        line-height: 8px;
+        font-size: 10px;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+    .result-table tr td{
+        padding: 10px 30px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    #result{
+        padding: 0 10% 5% 4%;
+    }
+
+    .result-title{
+        font-size: 20px;
+        padding: 10px 0;
+        margin-left: 55px;
+    }
+
+    .result-table {
+        display: flex;
+        justify-content: center;
+        /* margin-left: 40px; */
+    }
+    .result-table table{
+        margin-right: 0;
+    }
+
+
+    .result-table tr td{
+        padding: 4px 30px;
+        font-size: 10px;
+    }
+
+
+    .scorers{
+        margin-top: 7px;
+        line-height: 5px;
+        font-size: 9px;
+    }
+
+
+    .middle p{
+        margin-right: unset;
+        font-size: 10px;
+    }
+
+    .result-table tr td img{
+        width: 16px;
+        /* height: 25px;  */
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .result-table tr td{
+        padding: 4px 25px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .result-table tr td{
+        padding: 4px 20px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .result-table tr td{
+        padding: 4px 15px;
+    }
+}

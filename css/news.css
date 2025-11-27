@@ -1,0 +1,508 @@
+
+/* news section */
+#news{
+    z-index: -1;
+    background-image: url("./../image/plBg2.jpg");
+
+    /* background-blend-mode: overlay; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+
+    /* width:100%; */
+    /* height: 98vh; */
+    background-color: #04f5ff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Header item at the top */
+   /* overflow: hidden;*/ /* Hide vertical overflow */
+}
+
+
+.container{
+    /* display: grid; */
+    /* justify-content: center; */
+    grid-gap: 8% 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* overflow-x: auto;   */ /* Enable horizontal scrolling */
+    position: relative;
+}
+.container::-webkit-scrollbar {
+    width: 0px; /* Set the width to zero */
+    background: transparent; /* Make the scrollbar transparent */
+}
+
+.header-item{
+    margin-top: 2rem;
+    width: 820px;
+    /* position: relative; */
+    color: white;
+    grid-column: span 3;
+    background-color:#38003c;
+    border: 2px solid white;
+}
+.header-item-img img{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.358);
+    float: left;
+    vertical-align: top;
+    width:260px;
+    /* height: 260px; */
+    height: fit-content;
+    transition: 0.4S;
+}
+.header-item-content h1{
+    color: #00ff85;
+    padding: 10px 10px 0 270px;
+}
+.header-item-content p{
+    padding: 10px 10px 10px 270px;
+}
+
+
+
+.items-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    margin-top: 20px; /* Adjust spacing between header and items */
+    margin-bottom: 20px; /* Adjust spacing between items and bottom */
+    width: 775px;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+    overflow: auto hidden;
+    scrollbar-width: none; /* Firefox */
+    /*-ms-overflow-style: none;*/ /* Internet Explorer and Edge */
+    
+}
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+/* .container::-webkit-scrollbar {
+    display: none; 
+} */
+
+
+.item{
+    width: 250px;
+    height: 250px;
+    border: 2px solid white;
+
+    margin-right: 10px; /* Adjust margin between items */
+}
+
+.item-img img{
+    position: relative;
+    vertical-align: top;
+    width:250px;
+    height: 250px;
+    filter: grayscale(50%);
+    transition: all 0.4s ;
+}
+
+.item-img:hover img{
+    filter: none;
+}
+
+
+.item-content{
+    opacity: 0;
+    transform: translateY(-80px);
+    width: 95.2%;
+    padding: 2.5%;
+    transition: 0.4s;
+    background-color: #e90052d3;
+    box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.459);
+}
+
+.item-content h2{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0 0 0;
+}
+.news-paragraph{
+    visibility: hidden;
+}
+
+.item-content input{
+    font-family: 'Poppins', sans-serif;
+    background-color: #00ff85;
+    border: none;
+    width: 75%;
+    margin: 10px 0 10px 12%;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.item-content input:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #00ff84ca;
+}
+
+.item-img:hover .item-content{
+    opacity: 1;
+    transform: translateY(-97px);
+}
+
+/* scroll krdn bo left w right */
+.scroll-indicator {
+    position: absolute;
+    /* bottom: 0; */
+    /* right: 0; */
+    width: 10px; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-indicator.left {
+    left: 5px;
+    top:150px;
+}
+.scroll-indicator.right {
+    right: 5px;
+    top:150px;
+}
+
+.arrow-left,
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent; /* Adjust arrow size */
+    border-bottom: 10px solid transparent; /* Adjust arrow size */
+    cursor: pointer;
+}
+.arrow-left {
+    border-right: 20px solid #00ff48; /* Adjust arrow color */
+}
+.arrow-right {
+    border-left: 20px solid #44fb01; /* Adjust arrow color */
+}
+.arrow-left:hover {
+    border-right: 20px solid #a62fae;
+}
+.arrow-right:hover{
+    border-left:20px solid #a62fae;
+}
+
+
+/* last box item */
+/* .last .item-content{
+    opacity: 1;
+    background-color: purple;
+    box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.459);
+} */
+.last .item-content input{
+    margin: 10px 0 10px 12%;
+    padding: 5px;
+    transition: 0.2s;
+    visibility: visible;
+    opacity: 1;
+    background-color: #00ff85;
+    border: none;
+    width: 75%;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #00ff84ca;
+    border-radius: 8px;
+}
+/* remove its background also i don't want it is have it */
+.last .item-content{
+    background-color: transparent;
+    box-shadow: none;
+}
+/* make its font size bigger */
+.last .item-content input{
+    font-size: 25px;
+}
+/* make its filter to blur */
+.last .item-img img{
+    filter: blur(3px);
+}
+
+/* make responsive for 1024 */
+@media screen and (max-width: 1024px) {
+
+    /* #news{
+        height: 65vh;
+    } */
+    
+}
+@media screen and (max-width: 940px) {
+    .header-item{
+        width: 750px;
+    }
+    .header-item-img img{
+        width:225px;
+        /* height: 250px; */
+        height: fit-content;
+    }
+    .header-item-content h1{
+        color: #00ff85;
+        padding: 10px 10px 0 235px;
+    }
+    .header-item-content p{
+        padding: 10px 10px 10px 235px;
+    }
+    .items-container{
+        width:700px;
+    }
+    .item{
+        width: 225px;
+        height: 225px;
+    }
+    .item-img img{
+        width: 225px;
+        height: 225px;
+    }
+    .item-content h2{
+        font-size: 16px;
+    }
+    .item-img:hover .item-content{
+        transform: translateY(-80px);
+    }
+    .last .item-content input{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 875px) {
+    .header-item{
+        width: 650px;
+    }
+    .header-item-img img{
+        width:200px;
+        /* height: 250px; */
+        height: fit-content;
+    }
+    .header-item-content h1{
+        color: #00ff85;
+        padding: 10px 10px 0 210px;
+    }
+    .header-item-content p{
+        padding: 10px 10px 10px 210px;
+    }
+    .items-container{
+        width:600px;
+    }
+    .item{
+        width: 150px;
+        height: 150px;
+    }
+    .item-img img{
+        width: 150px;
+        height: 150px;
+    }
+    .item-content h2{
+        font-size: 13px;
+    }
+    .item-img:hover .item-content{
+        transform: translateY(-70px);
+    }
+    .item-content input{
+        font-size: 8px;
+    }
+    .scroll-indicator {
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 775px){
+    .header-item{
+        width: 550px;
+    }
+    .header-item-img img{
+        width:180px;
+        /* height: 250px; */
+        height: fit-content;
+    }
+    .header-item-content h1{
+        padding: 10px 10px 0 190px;
+    }
+    .header-item-content p{
+        padding: 10px 10px 10px 190px;
+    }
+    .items-container{
+        width:500px;
+    }
+    .item{
+        width: 150px;
+        height: 150px;
+    }
+    .item-img img{
+        width: 150px;
+        height: 150px;
+    }
+    .item-content h2{
+        font-size: 13px;
+    }
+    .item-img:hover .item-content{
+        transform: translateY(-70px);
+    }
+    .scroll-indicator {
+        visibility: hidden;
+    }
+    .last .item-content input{
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+
+
+    /* news section */
+    #news{
+        height: fit-content;
+    }
+
+
+    .container{
+        display: flex;
+    }
+
+
+    .header-item{
+        margin:2rem 0 0 0;
+        width: 300px;
+    }
+
+    .header-item-img img{
+        padding-bottom: 15px;
+        width:300px;
+        height:fit-content;
+    }
+
+    .header-item-content h1{
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .header-item-content p{
+        text-align: center;
+        padding: 0 10px 8px 12px;
+        font-size:12px;
+    }
+    
+    .item{
+        margin: 20px 0;    
+    }
+
+
+    .item{
+        width: 150px;
+        height: 150px;
+        border: 2px solid white;
+    
+        margin-right: 8px; /* Adjust margin between items */
+    }
+    
+    .item-img img{
+        position: relative;
+        vertical-align: top;
+        width:150px;
+        height: 150px;
+        filter: grayscale(50%);
+        transition: all 0.4s ;
+    }
+
+    
+    .item-content{
+        opacity: 0;
+        /* transform: translateY(-80px); */
+        width: 95.2%;
+        padding: 2.5%;
+        transition: 0.4s;
+        background-color: #e90052d3;
+        box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.459);
+    }
+    .item-img:hover .item-content{
+        transform: translateY(-65px);
+    }
+    
+    .item-content h2{
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        padding: 5px 0 0 0;
+    }
+    .news-paragraph{
+        visibility: hidden;
+    }
+    
+    .item-content input{
+        font-family: 'Poppins', sans-serif;
+        background-color: #00ff85;
+        border: none;
+        width: 75%;
+        margin: 5px 0 5px 12%;
+        padding: 5px;
+        transition: 0.2s;
+        font-size: 10px;
+    }
+    .items-container{
+        width: 400px;
+    }
+    .scroll-indicator.left,.scroll-indicator.right {
+        visibility: hidden;
+    }
+    .last .item-content input{
+        margin: 5px 0 5px 12%;
+        padding: 5px;
+        transition: 0.2s;
+        visibility: visible;
+        opacity: 1;
+        background-color: #00ff85;
+        border: none;
+        width: 75%;
+        cursor: pointer;
+        box-shadow: 0 0 10px 0 #00ff84ca;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .header-item{
+        width: 200px;
+    }
+    .header-item-img img{
+        width:200px;
+        height: fit-content;
+    }
+    .items-container{
+        width: 270px;
+    }
+    .item{
+        width: 100px;
+        height: 100px;
+        }
+    
+    .item-img img{
+        position: relative;
+        vertical-align: top;
+        width:100px;
+        height: 100px;
+    }
+    .item-content h2{
+        font-size: 8px;
+    }
+    .item-content input{
+        font-size: 6px;
+    }
+
+    .last .item-content input{
+        font-size: 12px;
+    }
+    .item-img:hover .item-content{
+
+    transform: translateY(-53px);
+    }
+}
+

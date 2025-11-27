@@ -1,0 +1,36 @@
+/*    contact section    */
+.contact{
+    text-align: center;
+    padding: 25px 0px 20px 0;
+    background-color: #38003c;
+}
+
+
+.contact a{
+    transition: 0.3s;
+    text-decoration: none;
+    margin: -10px 7px 0px 7px;
+    color: #e90052;
+}
+
+.contact a:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.contact p{
+    padding-top: 10px;
+    text-align: center;
+    color: #EAF6F6;
+}
+
+@media screen and (max-width: 500px) {
+
+    .contact{
+        text-align: center;
+        padding: 20px;
+        background-color: #38003c;
+        margin-bottom: 45px;
+    }
+
+}
